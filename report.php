@@ -1,5 +1,7 @@
 <?php
 
+sleep(10);
+
 $comment = isset($_REQUEST['comment']) ? $_REQUEST['comment'] : ''; 
 $screenshot =  isset($_REQUEST['screenshot']) ? $_REQUEST['screenshot'] : false;
 
