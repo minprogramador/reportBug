@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources/css/site.css">
+  </head>
+<body>
+    
+    <div id="reporting" class="feedback fixed-bottom-left">
+        <div class="tooltips" alt="Verificar saldo/Reportar erro/bug." title="Verificar saldo/Reportar erro/bug.">
+            <div class="btn-group dropup">
+            <button type="button" class="btn btn-info dropdown-toggle btn-circle btn-lg" data-toggle="dropdown" id="repBntInf">
+                <img src="resources/images/info.png" alt="Verificar saldo/Reportar erro/bug." title="Verificar saldo/Reportar erro/bug.">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-form" data-html2canvas-ignore="true">
+            
+                <li id="boxReportBug">
+              <div class="feedback-report">
+                <form class="doo" method="post" action="report.php">
+                  <div class="col-sm-12">
+                    <h5 style="padding-top: 0;">Reportar problema:</h5>
+                    <textarea required name="comment" class="form-control feedback-textarea" placeholder="Por favor, diga-nos qual bug ou problema que você encontrou, forneça o máximo de detalhes possível."></textarea>
+                    <input name="screenshot" type="hidden" class="feedback-screen-uri">
+                    <span class="feedback-cam feedback-screenshot pull-right"><i class="fa fa-camera" title="Tirar captura de tela"></i></span>
+                   </div>
+                   <div class="col-sm-12 clearfix">
+                    <button class="btn btn-primary btn-block">Enviar</button>
+                   </div>
+               </form>
+              </div>
+              <div class="feedback-loading text-center">
+                <h2>Please wait...</h2>
+                <h2><i class="fa fa-refresh fa-spin"></i></h2>
+              </div>
+              <div class="feedback-reported text-center">
+                <h2>Thank you!</h2>
+                <p>Your submission has been received, we will review it shortly.</p>
+                 <div class="col-sm-12 clearfix">
+                    <button class="btn btn-success btn-block feedback-close">Close</button>
+                 </div>
+              </div>
+              <div class="feedback-failed text-center">
+                <h2>Oh no!</h2>
+                <p>It looks like your submission was not sent.<br><br><a href="mailto:">Try contacting us by the old method.</a></p>
+                 <div class="col-sm-12 clearfix">
+                    <button class="btn btn-danger btn-block feedback-close">Close</button>
+                 </div>
+              </div>
+                </li>
+                <li id="boxOpcoes">
+                    <div class="feedback-report">
+                        <div class="col-sm-12 clearfix">
+                            <button class="btn btn-primary btn-block" id="bntRepProb">Reportar um problema</button>
+                        </div>
+                        <div class="col-sm-12 clearfix" id="boxpnts">
+                            <div id="boxOpLim">
+                                <p>LIMITE: <span>250</span></p>
+                        </div>
+                        <div id="boxOpUsa">
+                            <p>USADO: <span>0</span></p>
+                        </div>
+                    </div>
+                    <div class="feedback-loading text-center">
+                        <h2>Please wait...</h2>
+                        <h2><i class="fa fa-refresh fa-spin"></i></h2>
+                    </div>
+                    <div class="feedback-reported text-center">
+                        <h2>Thank you!</h2>
+                        <p>Your submission has been received, we will review it shortly.</p>
+                        <div class="col-sm-12 clearfix">
+                            <button class="btn btn-success btn-block feedback-close">Close</button>
+                        </div>
+                    </div>
+                    <div class="feedback-failed text-center">
+                        <h2>Oh no!</h2>
+                        <p>It looks like your submission was not sent.<br><br><a href="mailto:">Try contacting us by the old method.</a></p>
+                        <div class="col-sm-12 clearfix">
+                            <button class="btn btn-danger btn-block feedback-close">Close</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+  <script src="resources/js/jquery.min.js"></script>
+  <script src="resources/js/bootstrap.min.js"></script>
+  <script src="resources/js/html2canvas.min.js"></script>
+  <script src="resources/js/site.js"></script>
+</body>
+</html>
